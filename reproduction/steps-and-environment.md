@@ -2,10 +2,10 @@
 
 ## Environment
 
-- **Keycloak version:** (use the version mentioned in the GitHub issue)
+- **Keycloak version:** 
 - **Deployment:** Docker, single-node
 - **Browser:** Chrome and Firefox
-- **Host OS:** (your OS, e.g., Windows 11 / macOS / Linux)
+- **Host OS:** 
 
 ## Setup
 

@@ -2,10 +2,10 @@
 
 ## Environment
 
-- **Keycloak version:** 
+- **Keycloak version:** 26.5.4
 - **Deployment:** Docker, single-node
-- **Browser:** Chrome and Firefox
-- **Host OS:** 
+- **Browser:** Safari 26.2 and Firefox 148.0 
+- **Host OS:** Mac OS Tahoe 26.2
 
 ## Setup
 

@@ -18,7 +18,7 @@ After a fix for Issue #46606, re-test:
 
 ## Cross-browser behavior
 
-- Chrome.
+- Safari.
 - Firefox.
 - (Optionally) Edge or other supported browsers.
 

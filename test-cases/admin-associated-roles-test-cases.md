@@ -1,9 +1,3 @@
-
----
-
-### `test-cases/associated-roles-test-cases.md`
-
-```markdown
 # Test Cases – Associated Roles Performance and Usability
 
 ## TC-001 – Baseline behavior with few realms

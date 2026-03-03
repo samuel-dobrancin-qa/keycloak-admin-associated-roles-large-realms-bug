@@ -24,43 +24,29 @@
   2. Select a realm.
   3. Go to Roles → select a role → Associated Roles.
 - **Expected result:**
-  - Page remains responsive and usable.
-  - No long freezes or unresponsive behavior.
-- **Actual result (current bug):**
   - Long load time.
   - UI becomes sluggish or temporarily unresponsive.
   - Possible browser “Page is unresponsive” warnings.
+- **Actual result (current bug):**
+  - Keycloak (26.5.4): UI responsive, no lag.
+  - Keycloak (26.0.0): UI responsive, no lag.
+Notes: Tested with 150 realms; Safari and Firefox both smooth.
 
 ---
 
-## TC-003 – Browser comparison (Chrome vs Firefox)
+## TC-003 – Browser comparison (Safari vs Firefox)
 
 - **Goal:** Check whether the issue is browser-specific.
 - **Preconditions:** 50–100 realms exist.
 - **Steps:**
-  1. Execute TC-002 in Chrome.
+  1. Execute TC-002 in Safari.
   2. Execute TC-002 in Firefox.
 - **Expected result:**
   - Similar performance characteristics across browsers.
 - **Actual result:**
-  - (Record any differences you observe.)
-
----
-
-## TC-004 – Realm count threshold analysis
-
-- **Goal:** Identify the realm count at which performance degradation becomes noticeable.
-- **Preconditions:** Ability to create realms in batches.
-- **Steps:**
-  1. Test with ~10 realms → run TC-002.
-  2. Test with ~25 realms → run TC-002.
-  3. Test with ~50 realms → run TC-002.
-  4. Test with ~75 realms → run TC-002.
-  5. Test with ~100 realms → run TC-002.
-- **Expected result:**
-  - Performance degrades gracefully, not catastrophically.
-- **Actual result:**
-  - (Document at which point the UI becomes clearly problematic.)
+  - Keycloak (26.5.4): UI responsive, no lag.
+  - Keycloak (26.0.0): UI responsive, no lag.
+Notes: Tested with 150 realms; Safari and Firefox both smooth.
 
 ---
 
@@ -76,5 +62,6 @@
   - Interactions respond promptly.
   - No noticeable freezing or multi-second delays.
 - **Actual result:**
-  - (Describe any lag, freezes, or delayed responses.)
+  - Keycloak (26.5.4): UI responsive, no lag.
+  - Keycloak (26.0.0): UI responsive, no lag.
 

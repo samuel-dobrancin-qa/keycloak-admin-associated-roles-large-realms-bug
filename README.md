@@ -7,27 +7,19 @@ The goal was to reproduce the issue, analyze behavior across versions and browse
 
 The issue could not be reproduced under the tested conditions.
 
-    Keycloak 26.5.4 — smooth, responsive UI
-
-    Keycloak 26.0.0 — smooth, responsive UI
-
-    150 realms created via REST API
-
-    Safari 17.x and Firefox 148 on macOS M3
-
-    No lag, freezing, or UI degradation observed
-
-    Associated Roles tab loads instantly and scrolls smoothly
+- Keycloak 26.5.4 — smooth, responsive UI
+- Keycloak 26.0.0 — smooth, responsive UI
+- 150 realms created via REST API
+- Safari 17.x and Firefox 148 on macOS M3
+- No lag, freezing, or UI degradation observed
+- Associated Roles tab loads instantly and scrolls smoothly
 
 This suggests the issue may be:
 
-    fixed or improved in newer versions
-
-    browser‑specific (likely Chrome)
-
-    environment‑specific (slower hardware, Linux servers)
-
-    dependent on more complex role structures
+- fixed or improved in newer versions
+- browser‑specific (likely Chrome)
+- environment‑specific (slower hardware, Linux servers)
+- dependent on more complex role structures
 
 A detailed comment was posted on the real GitHub issue summarizing these findings.
 🏗️ Project Structure
@@ -56,33 +48,26 @@ pdfjs-search-bug-portfolio/
 └── README.md   ← (this file)
 
 🧩 Environment
+
 Hardware
-
-    macOS Sonoma
-
-    Apple M3
-
-    16GB RAM
+    - macOS Sonoma
+    - Apple M3
+    - 16GB RAM
 
 Browsers
-
-    Safari 17.x
-
-    Firefox 148
+    - Safari 17.x
+    - Firefox 148
 
 Keycloak Versions Tested
-
-    26.5.4 (latest at time of testing)
-
-    26.0.0 (close to version where issue was reported)
+    - 26.5.4 (latest at time of testing)
+    - 26.0.0 (close to version where issue was reported)
 
 Deployment
-
-    Docker single‑node instance
+    - Docker single‑node instance
 
     Started using:
 
-Kód
+Code
 
 docker run -p 8080:8080 \
   -e KEYCLOAK_ADMIN=admin \
@@ -90,48 +75,33 @@ docker run -p 8080:8080 \
   quay.io/keycloak/keycloak:<version> start-dev
 
 Test Data
-
-    150 realms created via Admin REST API
-
-    Script included in evidence/api-script-used.md
+- 150 realms created via Admin REST API
+- Script included in evidence/api-script-used.md
 
 🔍 Reproduction Steps
 
-    Start Keycloak in dev mode
-
-    Log in as admin
-
-    Create 150 realms using REST API
-
-    Open any realm
-
-    Navigate to:
+1. Start Keycloak in dev mode
+2. Log in as admin
+3. Create 150 realms using REST API
+4. Open any realm
+5. Navigate to:
     Roles → Select a role → Associated Roles
-
     Scroll, interact, and observe UI responsiveness
 
 📊 Expected vs Actual Behavior
+
 Expected (from GitHub Issue #46606)
-
-    Slow loading
-
-    UI lag
-
-    Freezing
-
-    Unresponsive scrolling
+- Slow loading
+- UI lag
+- Freezing
+- Unresponsive scrolling
 
 Actual (Observed)
-
-    Instant load times
-
-    Smooth scrolling
-
-    No freezing
-
-    No performance degradation
-
-    Identical behavior across both tested versions
+-  Instant load times
+- Smooth scrolling
+- No freezing
+- No performance degradation
+- Identical behavior across both tested versions
 
 📁 Evidence
 
@@ -151,43 +121,29 @@ This evidence demonstrates that the environment was correctly prepared and teste
 🤖 Automation Outline
 
 The automation outline includes:
-
-    Login flow
-
-    Realm selection
-
-    Navigation to Roles
-
-    Opening Associated Roles
-
-    Measuring load time and scroll responsiveness
+- Login flow
+- Realm selection
+- Navigation to Roles
+- Opening Associated Roles
+- Measuring load time and scroll responsiveness
 
 This provides a foundation for future automated performance checks.
 🧭 Conclusion
 
 The issue could not be reproduced on:
-
-    Keycloak 26.5.4
-
-    Keycloak 26.0.0
-
-    macOS M3
-
-    Safari and Firefox
-
-    150 realms
+- Keycloak 26.5.4
+- Keycloak 26.0.0
+- macOS M3
+- Safari and Firefox
+- 150 realms
 
 The UI remained fully responsive throughout testing.
 
 This suggests the issue may be:
-
-    fixed in newer versions
-
-    browser‑specific (likely Chrome)
-
-    dependent on more complex role structures
-
-    environment‑specific
+- fixed in newer versions
+- browser‑specific (likely Chrome)
+- dependent on more complex role structures
+- environment‑specific
 
 A detailed comment summarizing these findings was posted on the real GitHub issue:
 

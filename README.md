@@ -1,4 +1,4 @@
-##Keycloak Issue #46606 — Reproduction Attempt & QA Analysis
+Keycloak Issue #46606 — Reproduction Attempt & QA Analysis
 
 This project documents a full QA investigation into Keycloak Issue #46606, which reports UI performance degradation when navigating to Roles → Associated Roles in environments with many realms.
 
@@ -40,8 +40,6 @@ pdfjs-search-bug-portfolio/
 │   │   └── keycloak-server.log
 │   │
 │   └── screenshots/
-│       ├── before-degradation/
-│       ├── after-degradation/
 │       └── realms-list/
 │
 └── README.md   ← (this file)
@@ -63,8 +61,6 @@ Keycloak Versions Tested
 
 Deployment
     - Docker single‑node instance
-
-    Started using:
 
 Code
 
@@ -105,19 +101,14 @@ Actual (Observed)
 📁 Evidence
 
 All supporting evidence is stored in the evidence/ folder:
-
-    logs/keycloak-server.log — full server startup logs
-
-    screenshots/realms-list/ — proof of 150 realms
-
-    screenshots/before-degradation/ — UI before interaction
-
-    screenshots/after-degradation/ — UI after interaction
-
-    api-script-used.md — script used to generate realms
+    - logs/keycloak-server.log — full server startup logs
+    - screenshots/realms-list/ — proof of 150 realms
+    - screenshots/before-degradation/ — UI before interaction
+    - screenshots/after-degradation/ — UI after interaction
+    - api-script-used.md — script used to generate realms
 
 This evidence demonstrates that the environment was correctly prepared and tested.
-🤖 Automation Outline
+Automation Outline
 
 The automation outline includes:
 - Login flow
@@ -127,7 +118,8 @@ The automation outline includes:
 - Measuring load time and scroll responsiveness
 
 This provides a foundation for future automated performance checks.
-🧭 Conclusion
+
+Conclusion
 
 The issue could not be reproduced on:
 - Keycloak 26.5.4

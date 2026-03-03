@@ -1,9 +1,9 @@
-🧪 Keycloak Issue #46606 — Reproduction Attempt & QA Analysis
+##Keycloak Issue #46606 — Reproduction Attempt & QA Analysis
 
 This project documents a full QA investigation into Keycloak Issue #46606, which reports UI performance degradation when navigating to Roles → Associated Roles in environments with many realms.
 
 The goal was to reproduce the issue, analyze behavior across versions and browsers, and provide evidence‑based conclusions suitable for open‑source contribution and QA portfolio demonstration.
-🎯 Summary of Findings
+Summary of Findings
 
 The issue could not be reproduced under the tested conditions.
 
@@ -22,8 +22,7 @@ This suggests the issue may be:
 - dependent on more complex role structures
 
 A detailed comment was posted on the real GitHub issue summarizing these findings.
-🏗️ Project Structure
-Kód
+Project Structure
 
 pdfjs-search-bug-portfolio/
 │
@@ -47,7 +46,7 @@ pdfjs-search-bug-portfolio/
 │
 └── README.md   ← (this file)
 
-🧩 Environment
+##Environment
 
 Hardware
     - macOS Sonoma
